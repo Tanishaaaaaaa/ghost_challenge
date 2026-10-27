@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0c0d12;
+    color: #e2ded4;
+  }
+
+  h1, h2, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0f14;
+}
+::-webkit-scrollbar-thumb {
+  background: #252a36;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b4254;
+}
+
+/* Phosphor and Candlelight Accents */
+.phosphor-text {
+  color: #38ef7d;
+  text-shadow: 0 0 8px rgba(56, 239, 125, 0.45);
+}
+
+.amber-candle {
+  color: #ffb347;
+  text-shadow: 0 0 10px rgba(255, 179, 71, 0.35);
+}
+
+/* Vintage CRT Scanlines (tasteful subtle overlay) */
+.scanlines-overlay {
+  background: linear-gradient(
+    rgba(18, 20, 26, 0) 50%,
+    rgba(0, 0, 0, 0.35) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Soft atmospheric flicker */
+@keyframes flicker {
+  0% { opacity: 0.98; }
+  50% { opacity: 1; }
+  52% { opacity: 0.96; }
+  54% { opacity: 1; }
+  80% { opacity: 0.99; }
+  100% { opacity: 1; }
+}
+
+.subtle-flicker {
+  animation: flicker 8s infinite linear;
+}
+
+/* Floating dust particle */
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-40px) translateX(15px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-80px) translateX(-10px);
+    opacity: 0;
+  }
+}

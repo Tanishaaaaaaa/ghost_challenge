@@ -1,0 +1,6 @@
+{
+  "name": "Archive Afterlife — The Ghost in the Machine",
+  "description": "An eerie digital archive and software resurrection engine for Hacktoberfest 2026. Explore abandoned open-source projects, converse with their documentation ghosts via open-weight Gemma, inspect evidence trails, and generate modernization blueprints.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
